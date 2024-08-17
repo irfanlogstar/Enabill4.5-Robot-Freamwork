@@ -4,6 +4,7 @@
     <relativeTo>WORKSPACE</relativeTo>
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python/Lib/site-packages/SeleniumLibrary/__init__.py" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="ExcelLibrary" path="C:/Python/Lib/site-packages/ExcelLibrary.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="PandasLibrary" path="C:/Python/Lib/site-packages/PandasLibrary/__init__.py" dynamic="false"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

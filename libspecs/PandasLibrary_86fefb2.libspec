@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="PandasLibrary" type="LIBRARY" format="ROBOT" scope="GLOBAL" namedargs="true" generated="2024-07-21T15:34:38Z" specversion="2" source="C:\Python\Lib\site-packages\PandasLibrary\__init__.py" lineno="10">
+<version />
+<scope>global</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``PandasLibrary``.</doc>
+<kw name="Get Row And Column Size" lineno="102">
+<arguments>
+</arguments>
+<doc>This get_message keyword "get_row_and_column_size" which will return the
+number of rows and columns present in the file
+
+:param filename:  CSV fileName
+:return current_shape: Return the shape of the csv</doc>
+</kw>
+<kw name="Get Row Index" lineno="183">
+<arguments>
+<arg>column_name</arg>
+<arg>column_value</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Read All Columns" lineno="48">
+<arguments>
+<arg>row</arg>
+</arguments>
+<doc>This get_message keyword "read_all_columns" which will return the data
+based on row and all the column data.
+
+:param row:   Name of row
+:return available_data: Return the data present in the row and column in the csv file.</doc>
+</kw>
+<kw name="Read All Content" lineno="65">
+<arguments>
+</arguments>
+<doc>This get_message keyword "read_all_content" which will return the data of all rows and
+columns of the file specified as a argument
+
+:param filename:  CSV fileName
+:return available_data: Return the data present in all the rows and columns from the file</doc>
+</kw>
+<kw name="Read All Rows" lineno="30">
+<arguments>
+<arg>column</arg>
+</arguments>
+<doc>This get_message keyword "read_all_rows" which will return the data based on
+all the row datas and column names.
+
+:param column:  Name of column
+:return available_data: Return the data present in the row and column in the csv file.</doc>
+</kw>
+<kw name="Read Head Data" lineno="119">
+<arguments>
+<arg>head_value</arg>
+</arguments>
+<doc>This get_message keyword "read_head_data" which will return the
+data of particular rows and particular columns of the file specified as a argument.
+
+:param filename:  CSV fileName
+:param row:  Row name/number
+:param column: Column name/number
+:return available_data: Return the data present in row and column of the file</doc>
+</kw>
+<kw name="Read Row And Column" lineno="83">
+<arguments>
+<arg>row</arg>
+<arg>column</arg>
+</arguments>
+<doc>This get_message keyword "read_row_and_column" which will return the
+data of particular rows and particular columns of the file specified as a argument.
+
+:param filename:  CSV fileName
+:param row:  Row name/number
+:param column: Column name/number
+:return available_data: Return the data present in row and column of the file</doc>
+</kw>
+<kw name="Read Tail Data" lineno="138">
+<arguments>
+<arg>head_value</arg>
+</arguments>
+<doc>This get_message keyword "read_head_data" which will return the
+data of particular rows and particular columns of the file specified as a argument.
+
+:param filename:  CSV fileName
+:param row:  Row name/number
+:param column: Column name/number
+:return available_data: Return the data present in row and column of the file</doc>
+</kw>
+<kw name="Set Index" lineno="19">
+<arguments>
+<arg>file_name</arg>
+<arg>index_name</arg>
+<arg>file_type</arg>
+</arguments>
+<doc>Method to read the csv file and return the pandas dataframe.
+
+:param filename:  Name of CSV file
+:return  dataframe: Pandas dataframe of the csv file</doc>
+</kw>
+<kw name="Upload To Csv" lineno="157">
+<arguments>
+<arg>testcase_id</arg>
+<arg>status</arg>
+<arg>testinfo=None</arg>
+<arg>filename=test_report.csv</arg>
+</arguments>
+<doc>This get_message keyword "upload_to_csv" which will
+upload the results into the csv file.
+
+:param testcase_id: Test Case ID
+:param status:   Test STATUS
+:param testinfo: Test Description
+
+example:-
+13 December 2019-  18:54:59     123     Pre-setup PASS</doc>
+</kw>
+</keywordspec>
