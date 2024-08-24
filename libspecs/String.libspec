@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="String" type="LIBRARY" format="ROBOT" scope="GLOBAL" namedargs="true" generated="2024-08-13T07:00:17Z" specversion="2" source="C:\Users\iin001.ENVECON\AppData\Local\Programs\Python\Lib\site-packages\robot\libraries\String.py" lineno="31">
+<keywordspec name="String" type="LIBRARY" format="ROBOT" scope="GLOBAL" namedargs="true" generated="2024-08-24T07:49:01Z" specversion="2" source="C:\Users\iin001.ENVECON\AppData\Local\Programs\Python\Lib\site-packages\robot\libraries\String.py" lineno="31">
 <version>3.2.2</version>
 <scope>global</scope>
 <namedargs>yes</namedargs>

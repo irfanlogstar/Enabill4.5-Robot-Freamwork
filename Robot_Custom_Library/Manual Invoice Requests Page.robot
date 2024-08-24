@@ -1,13 +1,14 @@
-
 *** Settings ***
 Library    SeleniumLibrary
-Documentation    Manual Invoice Requests 
 Library           ExcelLibrary
 Library           String
 Library    Collections
+Library    OperatingSystem
+
 
 
 Resource    Common_Keyword.robot
+Resource    Receipt Page.robot
 
 *** Variables ***
 ${Manual Invoice Requests}        xpath://a[@href='/voucherrequestindex']
@@ -32,6 +33,8 @@ ${Filter2}    xpath://button[@type='submit']
 ${BASE_URL}    http://172.16.23.54:9009/requestvoucher/
 ${ClickOnInvNumber}    //td[contains(@class, 'k-table-td')]/a
 
+${InvoiceAmount}        xpath://span[contains(@class, 'ng-star-inserted') and contains(text(), '0')]
+
 ${InvStatus}        //span[contains(text(),'Pending')]
 ${ApprovedInv}      //*[text()='Approved']
 
@@ -41,16 +44,18 @@ ${Update}        //kendo-button[contains(@class, 'btn btn-Enabill')]
 ${FilePath1}       ${CURDIR}${/}..\\Robot_Data_Library\\Charge Data.xlsx
 ${SheetName1}         Charges
 
-${TABLELOCATOR}        //table[@class='k-grid-table k-table k-table-md']
+# ${TABLELOCATOR}        //table[@class='k-grid-table k-table k-table-md']
+
+${TABLE_XPATH}    //table[@class='k-grid-table k-table k-table-md']//td
+
+
 
 
 
 
 *** Keywords ***
-    
-
-Wait For Loader To Disappear
-    Wait Until Element Is Not Visible    xpath://div[@class='loader-div ng-star-inserted']
+# Wait For Loader To Disappear
+    # Wait Until Element Is Not Visible    xpath://div[@class='loader-div ng-star-inserted']
 
 # Scroll Until Element Is Visible
     # [Arguments]    ${locator}    ${timeout}=10s
@@ -94,6 +99,7 @@ Click On Manual Invoice Requests
 # Wait Until Keyword Succeeds    1 min    5 sec    Select Event With Booking Number     ${BookingNo}
     
 
+
 Filter
     [Arguments]    ${BlNumber}
     Wait For Loader To Disappear
@@ -111,11 +117,10 @@ Filter
     
     Wait Until Element Is Visible    ${Filter2}
     Click Element    ${Filter2}      
-   
         
 Select Event With Booking Number  
     [Arguments]    ${Description}
-    Wait For Loader To Disappear
+    # Wait For Loader To Disappear
     
     Wait Until Element Is Visible    ${ShowPendingEvents}  
     Click Element    ${ShowPendingEvents} 
@@ -146,12 +151,21 @@ Invoice Details Screen
     Wait Until Element Is Visible      ${NextButtonDetail}   timeout=10s
     Click Element    ${NextButtonDetail}
     # Retry Click Element   ${NextButtonDetail}
-    Sleep    5s        
-  
-     
+    Sleep    5s       
+
+     Wait Until Element Is Visible    ${InvoiceAmount}    5s
+    ${ActualInvAmt}    Get Text    ${InvoiceAmount}
+    ${ActualInvAmt}=    Replace String    ${ActualInvAmt}    ,    ''    # Remove commas
+    ${ActualInvAmt}=    Replace String    ${ActualInvAmt}    ' '    ''    # Remove spaces
+    ${ActualInvAmt}=    Evaluate    int('${ActualInvAmt}')
+      
+    Log    Invoice Amount: ${ActualInvAmt}
+    
     Wait Until Element Is Visible      ${SubmitButton}   timeout=10s
     Click Element    ${SubmitButton} 
     Sleep    5s  
+    
+    [Return]    ${ActualInvAmt}
     
 
 Retrieve and Log Invoice Number
@@ -164,19 +178,38 @@ Retrieve and Log Invoice Number
     Wait Until Element Is Visible        ${ClickOnInvNumber}  
     Click Element        ${ClickOnInvNumber}
     
-    # Wait Until Element Is Visible       ${InvStatus}  
-    # Click Element        ${InvStatus}
+    # Wait Until Element Is Visible    ${InvoiceAmount}    5s
+    # ${ActualInvAmt}    Get Text    ${InvoiceAmount}
+    # Log    Invoice Amount: ${ActualInvAmt}  
     
-    # Wait Until Element Is Visible        ${ApprovedInv}
-    # Click Element        ${ApprovedInv}   
+    Wait Until Element Is Visible       ${InvStatus}  
+    Click Element        ${InvStatus}
     
-    # Wait Until Element Is Visible        ${Update}  
-    # Click Element        ${Update}    
-    # Sleep    5s  
+    Wait Until Element Is Visible        ${ApprovedInv}
+    Click Element        ${ApprovedInv}   
+    
+    Wait Until Element Is Visible        ${Update}  
+    Click Element        ${Update}    
+    Sleep    5s
+
     
 
+# Get All Texts From Elements
+    # [Arguments]    ${locator}
+    # ${elements}=    Get WebElements    ${locator}
+    # ${texts}=    Create List
+    # FOR    ${element}    IN    @{elements}
+        # ${text}=    Get Text    ${element}
+        # Append To List    ${texts}    ${text}
+    # END
+    # [Return]    ${texts}
 
-        
+
+# Enter Full Receipt Amount
+    # [Arguments]     ${EnterREAMT}
+    # Enter Receipt Amount        ${EnterREAMT}
+    
+
     # Read Excel For charge 
         # [Arguments]    ${filepath}  ${Sheet}   ${Rowno}    ${Columnno}
         # Open Excel Document    ${filepath}    ${Sheet}
@@ -197,15 +230,14 @@ Retrieve and Log Invoice Number
 
 
 # table data
-    # ${AllData}    Get Text    ${TABLELOCATOR} 
-    # ${Rows}    Get Element Count    //table[@class='k-grid-table k-table k-table-md']/tbody/tr
-    # ${Columns}     Get Element Count  //table[@class='k-grid-header-table k-table k-table-md']//tr/th
+    # # ${AllData}    Get Text    ${TABLELOCATOR} 
     
-    # # ${rows_str}=    Convert To String    ${Rows}
-    # # Log To Console    Number of Rows is: ${rows_str}
-    # # ${column_str}=    Convert To String    ${Columns}
-    # # Log To Console    Number of coulmn  is: ${column_str}
-     
+    # ${Rows}    Get Element Count    //table[@class='k-grid-table k-table k-table-md']/tbody/tr
+    # ${Rows1}    Get Text    //table[@class='k-grid-table k-table k-table-md']/tbody/tr
+    # ${Columns}     Get Element Count  //table[@class='k-grid-header-table k-table k-table-md']//tr/th
+ 
+
+
     # Sleep    5s    
     # ${datarows}    Get Text     //table[@class='k-grid-table k-table k-table-md']/tbody/tr[1]
     # Log To Console     ${datarows}    

@@ -12,8 +12,6 @@ ${EnterRemark}    Test
 ${SettlementAmount}    50
 
 
-
-
 *** Test Cases ***
 Tc001
       [Documentation]    Check if the user can create an invoice for the provided booking.
@@ -23,21 +21,23 @@ Tc001
     Serach    Receipt
     Navigate to Receipt screen
     
-# TC002
-    # [Documentation]    Enter All Mandatory Filed of receipt
-     # Enter Receipt Details    ${Customer Name}
-     # Sleep    5s
+TC002
+    [Documentation]    Enter All Mandatory Filed of receipt
+     Enter Receipt Details    ${Customer Name}
+     Sleep    5s
      
-# TC003
-    # Type Of Receipt Normal
-    # Enter Receipt Amount    ${EnterSlipNo}    ${EnterREAMT}    ${EnterRemark}        
+TC003
+    Type Of Receipt Normal
+    Enter Receipt Bank Details   ${EnterSlipNo} 
+    Enter Receipt Amount        ${EnterREAMT}      
 
-# TC004
-        # Get Receipt Data
-# Tc005
-    # Open Receipt
+TC004
+        Get Receipt Data
+Tc005
+    Open Receipt
     
-TC006
-    Partila Settlement    ${Customer Name}    ${EnterSlipNo}    ${EnterREAMT}    ${EnterRemark}    ${SettlementAmount}
     
+# TC006
+    # Partila Settlement    ${Customer Name}    ${EnterSlipNo}    ${EnterREAMT}    ${EnterRemark}    ${SettlementAmount}
+       
     

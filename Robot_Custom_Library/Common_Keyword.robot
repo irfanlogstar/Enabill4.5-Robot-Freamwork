@@ -73,6 +73,10 @@ TC001K_Login_In_Enabill_4.5 with valid Credentials
     ${Password}=    Read Excel    ${FilePath}    ${SheetName}    2    2
     Login With Credentials      ${UserName}    ${Password}
     # Disaply The Enabill Logo
+    
+Logout
+    Click Element        //div[@class='d-flex']  
+    Click Element    //i[@class='ti ti-logout txt-w']
 
 
     

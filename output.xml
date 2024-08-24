@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.11.9 on win32)" generated="20240816 18:49:18.298" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.11.9 on win32)" generated="20240824 23:52:20.251" rpa="false">
 <suite id="s1" name="Enabill 4.5 1" source="D:\OneDrive - Envecon\All Envecon Project Data\Automation Testing\Robot Freamwork\Softwares\workspace\Enabill_4.5 1">
 <suite id="s1-s1" name="Robot Script Library" source="D:\OneDrive - Envecon\All Envecon Project Data\Automation Testing\Robot Freamwork\Softwares\workspace\Enabill_4.5 1\Robot_Script_Library">
-<suite id="s1-s1-s1" name="Receipt Test" source="D:\OneDrive - Envecon\All Envecon Project Data\Automation Testing\Robot Freamwork\Softwares\workspace\Enabill_4.5 1\Robot_Script_Library\Receipt Test.robot">
-<test id="s1-s1-s1-t1" name="Tc001">
+<suite id="s1-s1-s1" name="Manual Invoice Requests Test" source="D:\OneDrive - Envecon\All Envecon Project Data\Automation Testing\Robot Freamwork\Softwares\workspace\Enabill_4.5 1\Robot_Script_Library\Manual Invoice Requests Test.robot">
+<test id="s1-s1-s1-t1" name="Tc001-Login and Navigate to Manual Invoice Requests">
 <kw name="TC001K_Login_In_Enabill_4.5 with valid Credentials" library="Common_Keyword">
 <doc>TO want to verify if the system allows a user to log into the Enabill system using a valid username and password.</doc>
 <kw name="Open My Browser" library="Common_Keyword">
@@ -17,14 +17,14 @@
 <arg>${SiteURL}</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:19.016" level="INFO">Opening browser 'chrome' to base url 'http://172.16.23.54:9009/login'.</msg>
-<status status="PASS" starttime="20240816 18:49:19.015" endtime="20240816 18:49:21.786"></status>
+<msg timestamp="20240824 23:52:21.105" level="INFO">Opening browser 'chrome' to base url 'http://172.16.23.54:9009/login'.</msg>
+<status status="PASS" starttime="20240824 23:52:21.105" endtime="20240824 23:52:27.661"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240816 18:49:21.787" endtime="20240816 18:49:21.873"></status>
+<status status="PASS" starttime="20240824 23:52:27.661" endtime="20240824 23:52:27.695"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:19.015" endtime="20240816 18:49:21.873"></status>
+<status status="PASS" starttime="20240824 23:52:21.104" endtime="20240824 23:52:27.695"></status>
 </kw>
 <kw name="Read Excel" library="Common_Keyword">
 <arguments>
@@ -42,7 +42,7 @@
 <arg>${filepath}</arg>
 <arg>${Sheet}</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:21.873" endtime="20240816 18:49:21.881"></status>
+<status status="PASS" starttime="20240824 23:52:27.698" endtime="20240824 23:52:27.709"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -53,15 +53,15 @@
 <assign>
 <var>${data}</var>
 </assign>
-<msg timestamp="20240816 18:49:21.882" level="INFO">${data} = sagar.patil</msg>
-<status status="PASS" starttime="20240816 18:49:21.881" endtime="20240816 18:49:21.882"></status>
+<msg timestamp="20240824 23:52:27.710" level="INFO">${data} = sagar.patil</msg>
+<status status="PASS" starttime="20240824 23:52:27.709" endtime="20240824 23:52:27.710"></status>
 </kw>
 <kw name="Close All Excel Documents" library="ExcelLibrary">
 <doc>Closes all opened documents.</doc>
-<status status="PASS" starttime="20240816 18:49:21.882" endtime="20240816 18:49:21.882"></status>
+<status status="PASS" starttime="20240824 23:52:27.710" endtime="20240824 23:52:27.711"></status>
 </kw>
-<msg timestamp="20240816 18:49:21.882" level="INFO">${UserName} = sagar.patil</msg>
-<status status="PASS" starttime="20240816 18:49:21.873" endtime="20240816 18:49:21.882"></status>
+<msg timestamp="20240824 23:52:27.711" level="INFO">${UserName} = sagar.patil</msg>
+<status status="PASS" starttime="20240824 23:52:27.695" endtime="20240824 23:52:27.711"></status>
 </kw>
 <kw name="Read Excel" library="Common_Keyword">
 <arguments>
@@ -79,7 +79,7 @@
 <arg>${filepath}</arg>
 <arg>${Sheet}</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:21.883" endtime="20240816 18:49:21.889"></status>
+<status status="PASS" starttime="20240824 23:52:27.716" endtime="20240824 23:52:27.726"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -90,15 +90,15 @@
 <assign>
 <var>${data}</var>
 </assign>
-<msg timestamp="20240816 18:49:21.889" level="INFO">${data} = Pass@222</msg>
-<status status="PASS" starttime="20240816 18:49:21.889" endtime="20240816 18:49:21.890"></status>
+<msg timestamp="20240824 23:52:27.728" level="INFO">${data} = Pass@222</msg>
+<status status="PASS" starttime="20240824 23:52:27.727" endtime="20240824 23:52:27.728"></status>
 </kw>
 <kw name="Close All Excel Documents" library="ExcelLibrary">
 <doc>Closes all opened documents.</doc>
-<status status="PASS" starttime="20240816 18:49:21.890" endtime="20240816 18:49:21.890"></status>
+<status status="PASS" starttime="20240824 23:52:27.728" endtime="20240824 23:52:27.728"></status>
 </kw>
-<msg timestamp="20240816 18:49:21.891" level="INFO">${Password} = Pass@222</msg>
-<status status="PASS" starttime="20240816 18:49:21.883" endtime="20240816 18:49:21.891"></status>
+<msg timestamp="20240824 23:52:27.729" level="INFO">${Password} = Pass@222</msg>
+<status status="PASS" starttime="20240824 23:52:27.712" endtime="20240824 23:52:27.729"></status>
 </kw>
 <kw name="Login With Credentials" library="Common_Keyword">
 <arguments>
@@ -115,10 +115,10 @@
 <arg>${Text_UserName}</arg>
 <arg>${Username}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:21.892" level="INFO">Typing text 'sagar.patil' into text field 'xpath://input[@id='email']'.</msg>
-<status status="PASS" starttime="20240816 18:49:21.892" endtime="20240816 18:49:22.047"></status>
+<msg timestamp="20240824 23:52:27.732" level="INFO">Typing text 'sagar.patil' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20240824 23:52:27.730" endtime="20240824 23:52:27.873"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:21.891" endtime="20240816 18:49:22.048"></status>
+<status status="PASS" starttime="20240824 23:52:27.729" endtime="20240824 23:52:27.874"></status>
 </kw>
 <kw name="EnterPassword" library="Common_Keyword">
 <arguments>
@@ -130,10 +130,10 @@
 <arg>${Text_Password}</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:22.048" level="INFO">Typing text 'Pass@222' into text field 'id=password'.</msg>
-<status status="PASS" starttime="20240816 18:49:22.048" endtime="20240816 18:49:22.142"></status>
+<msg timestamp="20240824 23:52:27.874" level="INFO">Typing text 'Pass@222' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20240824 23:52:27.874" endtime="20240824 23:52:27.970"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:22.048" endtime="20240816 18:49:22.142"></status>
+<status status="PASS" starttime="20240824 23:52:27.874" endtime="20240824 23:52:27.971"></status>
 </kw>
 <kw name="Click On Login Button" library="Common_Keyword">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -141,15 +141,852 @@
 <arguments>
 <arg>${Button_Login}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:22.142" level="INFO">Clicking button 'id=Login'.</msg>
-<status status="PASS" starttime="20240816 18:49:22.142" endtime="20240816 18:49:22.225"></status>
+<msg timestamp="20240824 23:52:27.972" level="INFO">Clicking button 'id=Login'.</msg>
+<status status="PASS" starttime="20240824 23:52:27.972" endtime="20240824 23:52:28.041"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:22.142" endtime="20240816 18:49:22.226"></status>
+<status status="PASS" starttime="20240824 23:52:27.971" endtime="20240824 23:52:28.042"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:21.891" endtime="20240816 18:49:22.226"></status>
+<status status="PASS" starttime="20240824 23:52:27.729" endtime="20240824 23:52:28.042"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:19.014" endtime="20240816 18:49:22.226"></status>
+<status status="PASS" starttime="20240824 23:52:21.104" endtime="20240824 23:52:28.043"></status>
 </kw>
+<kw name="Serach" library="Common_Keyword">
+<arguments>
+<arg>Manual Invoice</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${searchbox}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:28.043" endtime="20240824 23:52:28.700"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${searchbox}</arg>
+<arg>${Serach}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:28.700" level="INFO">Typing text 'Manual Invoice' into text field '//input[@id='Search']'.</msg>
+<status status="PASS" starttime="20240824 23:52:28.700" endtime="20240824 23:52:29.008"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:28.043" endtime="20240824 23:52:29.008"></status>
+</kw>
+<kw name="Click On Manual Invoice Requests" library="Manual Invoice Requests Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Manual Invoice Requests}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:29.009" endtime="20240824 23:52:29.060"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Manual Invoice Requests}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:29.061" level="INFO">Clicking link 'xpath://a[@href='/voucherrequestindex']'.</msg>
+<status status="PASS" starttime="20240824 23:52:29.061" endtime="20240824 23:52:29.248"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${AddButton}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:29.249" level="INFO">Clicking element 'xpath://button[@routerlink='/voucherrequestitem/0']'.</msg>
+<status status="PASS" starttime="20240824 23:52:29.248" endtime="20240824 23:52:29.486"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:29.008" endtime="20240824 23:52:29.487"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20240824 23:52:34.488" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:52:29.487" endtime="20240824 23:52:34.488"></status>
+</kw>
+<doc>Check if the user can log in to the Enabill system with valid credentials
+and navigate to the "Manual Invoice Requests" page</doc>
+<status status="PASS" starttime="20240824 23:52:21.103" endtime="20240824 23:52:34.489" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="TC002 - Filter Invoice by BL Number">
+<kw name="Filter" library="Manual Invoice Requests Page">
+<arguments>
+<arg>${BLNumber}</arg>
+</arguments>
+<kw name="Wait For Loader To Disappear" library="Receipt Page">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>xpath://div[@class='loader-div ng-star-inserted']</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:34.491" endtime="20240824 23:52:34.504"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:34.490" endtime="20240824 23:52:34.504"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${VoucherGroupFilter1}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:34.504" endtime="20240824 23:52:34.524"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${VoucherGroupFilter1}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:34.524" level="INFO">Clicking element 'xpath://a[@title='Voucher Group Column Menu']//kendo-svg-icon[contains(@class, 'k-svg-i-more-vertical')]'.</msg>
+<status status="PASS" starttime="20240824 23:52:34.524" endtime="20240824 23:52:34.612"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20240824 23:52:39.613" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:52:34.613" endtime="20240824 23:52:39.613"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Filter}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:39.613" endtime="20240824 23:52:39.632"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Filter}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:39.632" level="INFO">Clicking element 'xpath://div[@role='button'and contains(text(), 'Filter')]'.</msg>
+<status status="PASS" starttime="20240824 23:52:39.632" endtime="20240824 23:52:39.691"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SearchinputTextField}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:39.692" endtime="20240824 23:52:39.938"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Inputting text in ${SearchinputTextField}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:39.939" level="INFO">Inputting text in xpath://kendo-grid-string-filter-menu-input[1]//kendo-grid-filter-menu-input-wrapper[1]//input[@aria-label='Voucher Group Filter']</msg>
+<status status="PASS" starttime="20240824 23:52:39.938" endtime="20240824 23:52:39.939"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240824 23:52:40.063" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240824 23:52:39.939" endtime="20240824 23:52:40.063"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchinputTextField}</arg>
+<arg>${BlNumber}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:40.065" level="INFO">Typing text '62332853BN08222024023EMP' into text field 'xpath://kendo-grid-string-filter-menu-input[1]//kendo-grid-filter-menu-input-wrapper[1]//input[@aria-label='Voucher Group Filter']'.</msg>
+<status status="PASS" starttime="20240824 23:52:40.064" endtime="20240824 23:52:40.433"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Filter2}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:40.433" endtime="20240824 23:52:40.456"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Filter2}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:40.456" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240824 23:52:40.456" endtime="20240824 23:52:40.540"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:34.490" endtime="20240824 23:52:40.540"></status>
+</kw>
+<doc>Check if the user can filter invoices by entering the BL number.</doc>
+<status status="PASS" starttime="20240824 23:52:34.489" endtime="20240824 23:52:40.540" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="TC003 - Add New Event/Trigger for the Booking">
+<kw name="Select Event With Booking Number" library="Manual Invoice Requests Page">
+<arguments>
+<arg>${Description2}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ShowPendingEvents}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:40.544" endtime="20240824 23:52:40.565"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ShowPendingEvents}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:40.566" level="INFO">Clicking element 'xpath://div[@class='card-header']//button[@class='btn btn-Enabill']'.</msg>
+<status status="PASS" starttime="20240824 23:52:40.566" endtime="20240824 23:52:40.628"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SelectEvenets}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:40.629" endtime="20240824 23:52:41.690"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectEvenets}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:41.691" level="INFO">Selecting checkbox 'xpath://td[@role='gridcell' and contains(@class, 'k-table-td') and contains(@class, 'text-center')]//input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20240824 23:52:41.691" endtime="20240824 23:52:41.908"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20240824 23:52:46.909" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:52:41.909" endtime="20240824 23:52:46.909"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${AddChargesButton}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:46.909" endtime="20240824 23:52:47.214"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${AddChargesButton}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:47.214" level="INFO">Clicking element 'xpath://button[@title='Add']'.</msg>
+<status status="PASS" starttime="20240824 23:52:47.214" endtime="20240824 23:52:47.274"></status>
+</kw>
+<kw name="Retry Click Element" library="Manual Invoice Requests Page">
+<arguments>
+<arg>${AddChargesButton}</arg>
+</arguments>
+<kw name="Convert To Integer" library="BuiltIn">
+<doc>Converts the given item to an integer number.</doc>
+<arguments>
+<arg>${attempts}</arg>
+</arguments>
+<assign>
+<var>${attempts}</var>
+</assign>
+<msg timestamp="20240824 23:52:47.276" level="INFO">${attempts} = 2</msg>
+<status status="PASS" starttime="20240824 23:52:47.275" endtime="20240824 23:52:47.276"></status>
+</kw>
+<kw name="${counter} IN RANGE [ 1 | ${attempts + 1} ]" type="for">
+<kw name="${counter} = 1" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Attempt ${counter} to click element ${locator}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:47.277" level="INFO">Attempt 1 to click element xpath://button[@title='Add']</msg>
+<status status="PASS" starttime="20240824 23:52:47.277" endtime="20240824 23:52:47.277"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:47.278" level="INFO">Clicking element 'xpath://button[@title='Add']'.</msg>
+<status status="PASS" starttime="20240824 23:52:47.278" endtime="20240824 23:52:47.334"></status>
+</kw>
+<msg timestamp="20240824 23:52:47.334" level="INFO">${result} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240824 23:52:47.277" endtime="20240824 23:52:47.334"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:47.351" level="INFO">Element 'xpath://button[@title='Add']' is displayed.</msg>
+<status status="PASS" starttime="20240824 23:52:47.334" endtime="20240824 23:52:47.351"></status>
+</kw>
+<msg timestamp="20240824 23:52:47.351" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20240824 23:52:47.334" endtime="20240824 23:52:47.351"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Is Element Stale</arg>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${stale}</var>
+</assign>
+<kw name="Is Element Stale" library="Manual Invoice Requests Page">
+<doc>Check if the element is stale and return status.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>SeleniumLibrary.Element Should Be Visible</arg>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:47.365" level="INFO">Element 'xpath://button[@title='Add']' is displayed.</msg>
+<status status="PASS" starttime="20240824 23:52:47.352" endtime="20240824 23:52:47.366"></status>
+</kw>
+<msg timestamp="20240824 23:52:47.366" level="INFO">${result} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240824 23:52:47.352" endtime="20240824 23:52:47.366"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${result}[0] == 'FAIL'</arg>
+</arguments>
+<assign>
+<var>${stale}</var>
+</assign>
+<msg timestamp="20240824 23:52:47.368" level="FAIL">Evaluating expression 'PASS == 'FAIL'' failed: NameError: name 'PASS' is not defined nor importable as module</msg>
+<status status="FAIL" starttime="20240824 23:52:47.366" endtime="20240824 23:52:47.368"></status>
+</kw>
+<status status="FAIL" starttime="20240824 23:52:47.351" endtime="20240824 23:52:47.369"></status>
+</kw>
+<msg timestamp="20240824 23:52:47.369" level="INFO">${stale} = False</msg>
+<status status="PASS" starttime="20240824 23:52:47.351" endtime="20240824 23:52:47.369"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${status} or not ${stale}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:47.369" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20240824 23:52:47.369" endtime="20240824 23:52:47.369"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:47.277" endtime="20240824 23:52:47.369"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:47.276" endtime="20240824 23:52:47.370"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Element '${locator}' not visible after ${attempts} attempts</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:47.370" endtime="20240824 23:52:47.371"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:47.275" endtime="20240824 23:52:47.371"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Description_Locator}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:47.371" endtime="20240824 23:52:47.389"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Description_Locator}</arg>
+<arg>${Description}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:47.389" level="INFO">Typing text 'Test' into text field 'xpath://kendo-textbox[@formcontrolname='Description']//input[@class='k-input-inner']'.</msg>
+<status status="PASS" starttime="20240824 23:52:47.389" endtime="20240824 23:52:47.494"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20240824 23:52:50.495" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240824 23:52:47.495" endtime="20240824 23:52:50.495"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${NextButton}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:50.495" endtime="20240824 23:52:50.814"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NextButton}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:50.814" level="INFO">Clicking element '//span[text()=' Next ']'.</msg>
+<status status="PASS" starttime="20240824 23:52:50.814" endtime="20240824 23:52:50.909"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:52:40.542" endtime="20240824 23:52:50.909"></status>
+</kw>
+<doc>Check if the user can create an invoice for the provided booking.
+- User clicks on the add button and searches for the booking number in the "Ref No" field.
+- User selects the pending event for the same booking number.
+- User clicks on the next button..</doc>
+<status status="PASS" starttime="20240824 23:52:40.541" endtime="20240824 23:52:50.910" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="TC004 - Verify Invoice Details Screen">
+<kw name="Invoice Details Screen" library="Manual Invoice Requests Page">
+<assign>
+<var>${ActualInvAmt}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${NextButtonDetail}</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:50.911" endtime="20240824 23:52:51.565"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NextButtonDetail}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:51.565" level="INFO">Clicking element 'xpath://kendo-button[@role='button']//span[text()='Next ']'.</msg>
+<status status="PASS" starttime="20240824 23:52:51.565" endtime="20240824 23:52:51.617"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20240824 23:52:56.618" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:52:51.617" endtime="20240824 23:52:56.618"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${InvoiceAmount}</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:56.618" endtime="20240824 23:52:56.637"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${InvoiceAmount}</arg>
+</arguments>
+<assign>
+<var>${ActualInvAmt}</var>
+</assign>
+<msg timestamp="20240824 23:52:56.654" level="INFO">${ActualInvAmt} = 1,500</msg>
+<status status="PASS" starttime="20240824 23:52:56.637" endtime="20240824 23:52:56.654"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${ActualInvAmt}</arg>
+<arg>,</arg>
+<arg>''</arg>
+</arguments>
+<assign>
+<var>${ActualInvAmt}</var>
+</assign>
+<msg timestamp="20240824 23:52:56.654" level="INFO">${ActualInvAmt} = 1''500</msg>
+<status status="PASS" starttime="20240824 23:52:56.654" endtime="20240824 23:52:56.654"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${ActualInvAmt}</arg>
+<arg>' '</arg>
+<arg>''</arg>
+</arguments>
+<assign>
+<var>${ActualInvAmt}</var>
+</assign>
+<msg timestamp="20240824 23:52:56.654" level="INFO">${ActualInvAmt} = 1''500</msg>
+<status status="PASS" starttime="20240824 23:52:56.654" endtime="20240824 23:52:56.654"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>int('${ActualInvAmt}')</arg>
+</arguments>
+<assign>
+<var>${ActualInvAmt}</var>
+</assign>
+<msg timestamp="20240824 23:52:56.654" level="INFO">${ActualInvAmt} = 1500</msg>
+<status status="PASS" starttime="20240824 23:52:56.654" endtime="20240824 23:52:56.654"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Invoice Amount: ${ActualInvAmt}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:56.654" level="INFO">Invoice Amount: 1500</msg>
+<status status="PASS" starttime="20240824 23:52:56.654" endtime="20240824 23:52:56.654"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SubmitButton}</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:52:56.654" endtime="20240824 23:52:56.674"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SubmitButton}</arg>
+</arguments>
+<msg timestamp="20240824 23:52:56.674" level="INFO">Clicking element 'xpath:(//i[@class='fa fa-floppy-o'])[1]'.</msg>
+<status status="PASS" starttime="20240824 23:52:56.674" endtime="20240824 23:52:56.730"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20240824 23:53:01.731" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:52:56.730" endtime="20240824 23:53:01.731"></status>
+</kw>
+<msg timestamp="20240824 23:53:01.732" level="INFO">${ActualInvAmt} = 1500</msg>
+<status status="PASS" starttime="20240824 23:52:50.911" endtime="20240824 23:53:01.732"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${InvoiceAMount}</arg>
+<arg>${${ActualInvAmt}}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:01.732" level="INFO">${InvoiceAMount} = 1500</msg>
+<status status="PASS" starttime="20240824 23:53:01.732" endtime="20240824 23:53:01.732"></status>
+</kw>
+<doc>Check if the system can display all charges for the booking/cycle.</doc>
+<status status="PASS" starttime="20240824 23:52:50.910" endtime="20240824 23:53:01.732" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t5" name="TC005 - Retrieve Invoice Number and Request ID">
+<kw name="Retrieve and Log Invoice Number" library="Manual Invoice Requests Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//td[contains(@class, 'k-table-td')]/a</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:01.735" endtime="20240824 23:53:01.753"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//td[contains(@class, 'k-table-td')]/a</arg>
+</arguments>
+<assign>
+<var>${invoice_number}</var>
+</assign>
+<msg timestamp="20240824 23:53:01.766" level="INFO">${invoice_number} = INV/2024/00830</msg>
+<status status="PASS" starttime="20240824 23:53:01.753" endtime="20240824 23:53:01.766"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${current_url}</var>
+</assign>
+<msg timestamp="20240824 23:53:01.770" level="INFO">${current_url} = http://172.16.23.54:9009/requestvoucher/978</msg>
+<status status="PASS" starttime="20240824 23:53:01.766" endtime="20240824 23:53:01.770"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>'''${current_url}'''.split('/')[-1]</arg>
+</arguments>
+<assign>
+<var>${request_id}</var>
+</assign>
+<msg timestamp="20240824 23:53:01.770" level="INFO">${request_id} = 978</msg>
+<status status="PASS" starttime="20240824 23:53:01.770" endtime="20240824 23:53:01.770"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Invoice Number: ${invoice_number}, Request ID: ${request_id}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:01.770" level="INFO">Invoice Number: INV/2024/00830, Request ID: 978</msg>
+<status status="PASS" starttime="20240824 23:53:01.770" endtime="20240824 23:53:01.770"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ClickOnInvNumber}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:01.770" endtime="20240824 23:53:01.786"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickOnInvNumber}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:01.786" level="INFO">Clicking element '//td[contains(@class, 'k-table-td')]/a'.</msg>
+<status status="PASS" starttime="20240824 23:53:01.786" endtime="20240824 23:53:01.914"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${InvStatus}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:01.914" endtime="20240824 23:53:02.178"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${InvStatus}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:02.179" level="INFO">Clicking element '//span[contains(text(),'Pending')]'.</msg>
+<status status="PASS" starttime="20240824 23:53:02.178" endtime="20240824 23:53:02.261"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ApprovedInv}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:02.261" endtime="20240824 23:53:02.497"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ApprovedInv}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:02.497" level="INFO">Clicking element '//*[text()='Approved']'.</msg>
+<status status="PASS" starttime="20240824 23:53:02.497" endtime="20240824 23:53:02.560"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Update}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:02.560" endtime="20240824 23:53:02.581"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Update}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:02.582" level="INFO">Clicking element '//kendo-button[contains(@class, 'btn btn-Enabill')]'.</msg>
+<status status="PASS" starttime="20240824 23:53:02.582" endtime="20240824 23:53:02.642"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20240824 23:53:07.643" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:02.642" endtime="20240824 23:53:07.643"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:01.734" endtime="20240824 23:53:07.643"></status>
+</kw>
+<doc>Check if the user can successfully create an invoice and retrieve
+the invoice number and request ID from which the invoice is generated</doc>
+<status status="PASS" starttime="20240824 23:53:01.734" endtime="20240824 23:53:07.643" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t6" name="TC006 - Logout and Close Browser">
+<kw name="Logout" library="Common_Keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='d-flex']</arg>
+</arguments>
+<msg timestamp="20240824 23:53:07.645" level="INFO">Clicking element '//div[@class='d-flex']'.</msg>
+<status status="PASS" starttime="20240824 23:53:07.645" endtime="20240824 23:53:07.717"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//i[@class='ti ti-logout txt-w']</arg>
+</arguments>
+<msg timestamp="20240824 23:53:07.718" level="INFO">Clicking element '//i[@class='ti ti-logout txt-w']'.</msg>
+<status status="PASS" starttime="20240824 23:53:07.718" endtime="20240824 23:53:07.814"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:07.644" endtime="20240824 23:53:07.814"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240824 23:53:07.815" endtime="20240824 23:53:10.103"></status>
+</kw>
+<doc>After successfully creating an invoice, the user should be able to log out
+and close the browser.</doc>
+<status status="PASS" starttime="20240824 23:53:07.644" endtime="20240824 23:53:10.104" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t7" name="TC007 - Re-login to Enabill System">
+<kw name="TC001K_Login_In_Enabill_4.5 with valid Credentials" library="Common_Keyword">
+<doc>TO want to verify if the system allows a user to log into the Enabill system using a valid username and password.</doc>
+<kw name="Open My Browser" library="Common_Keyword">
+<arguments>
+<arg>${SiteURL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SiteURL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:10.107" level="INFO">Opening browser 'chrome' to base url 'http://172.16.23.54:9009/login'.</msg>
+<status status="PASS" starttime="20240824 23:53:10.106" endtime="20240824 23:53:15.568"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240824 23:53:15.569" endtime="20240824 23:53:15.606"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:10.106" endtime="20240824 23:53:15.606"></status>
+</kw>
+<kw name="Read Excel" library="Common_Keyword">
+<arguments>
+<arg>${FilePath}</arg>
+<arg>${SheetName}</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${UserName}</var>
+</assign>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${filepath}</arg>
+<arg>${Sheet}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:15.607" endtime="20240824 23:53:15.613"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>${Rowno}</arg>
+<arg>${Columnno}</arg>
+</arguments>
+<assign>
+<var>${data}</var>
+</assign>
+<msg timestamp="20240824 23:53:15.614" level="INFO">${data} = sagar.patil</msg>
+<status status="PASS" starttime="20240824 23:53:15.613" endtime="20240824 23:53:15.614"></status>
+</kw>
+<kw name="Close All Excel Documents" library="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" starttime="20240824 23:53:15.614" endtime="20240824 23:53:15.614"></status>
+</kw>
+<msg timestamp="20240824 23:53:15.615" level="INFO">${UserName} = sagar.patil</msg>
+<status status="PASS" starttime="20240824 23:53:15.606" endtime="20240824 23:53:15.615"></status>
+</kw>
+<kw name="Read Excel" library="Common_Keyword">
+<arguments>
+<arg>${FilePath}</arg>
+<arg>${SheetName}</arg>
+<arg>2</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${Password}</var>
+</assign>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${filepath}</arg>
+<arg>${Sheet}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:15.616" endtime="20240824 23:53:15.620"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>${Rowno}</arg>
+<arg>${Columnno}</arg>
+</arguments>
+<assign>
+<var>${data}</var>
+</assign>
+<msg timestamp="20240824 23:53:15.624" level="INFO">${data} = Pass@222</msg>
+<status status="PASS" starttime="20240824 23:53:15.620" endtime="20240824 23:53:15.624"></status>
+</kw>
+<kw name="Close All Excel Documents" library="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" starttime="20240824 23:53:15.624" endtime="20240824 23:53:15.624"></status>
+</kw>
+<msg timestamp="20240824 23:53:15.624" level="INFO">${Password} = Pass@222</msg>
+<status status="PASS" starttime="20240824 23:53:15.615" endtime="20240824 23:53:15.624"></status>
+</kw>
+<kw name="Login With Credentials" library="Common_Keyword">
+<arguments>
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+</arguments>
+<kw name="EnterUserName" library="Common_Keyword">
+<arguments>
+<arg>${Username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Text_UserName}</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:15.625" level="INFO">Typing text 'sagar.patil' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20240824 23:53:15.625" endtime="20240824 23:53:15.781"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:15.625" endtime="20240824 23:53:15.781"></status>
+</kw>
+<kw name="EnterPassword" library="Common_Keyword">
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Text_Password}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:15.783" level="INFO">Typing text 'Pass@222' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20240824 23:53:15.781" endtime="20240824 23:53:15.888"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:15.781" endtime="20240824 23:53:15.888"></status>
+</kw>
+<kw name="Click On Login Button" library="Common_Keyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Button_Login}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:15.889" level="INFO">Clicking button 'id=Login'.</msg>
+<status status="PASS" starttime="20240824 23:53:15.888" endtime="20240824 23:53:15.960"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:15.888" endtime="20240824 23:53:15.961"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:15.625" endtime="20240824 23:53:15.961"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:10.105" endtime="20240824 23:53:15.961"></status>
+</kw>
+<doc>Check if the user can log in again to the Enabill system after logging out.</doc>
+<status status="PASS" starttime="20240824 23:53:10.105" endtime="20240824 23:53:15.962" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t8" name="TC008 - Full Settlement for Created Invoice">
 <kw name="Serach" library="Common_Keyword">
 <arguments>
 <arg>Receipt</arg>
@@ -159,7 +996,7 @@
 <arguments>
 <arg>${searchbox}</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:22.227" endtime="20240816 18:49:22.639"></status>
+<status status="PASS" starttime="20240824 23:53:15.965" endtime="20240824 23:53:16.618"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -167,10 +1004,10 @@
 <arg>${searchbox}</arg>
 <arg>${Serach}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:22.640" level="INFO">Typing text 'Receipt' into text field '//input[@id='Search']'.</msg>
-<status status="PASS" starttime="20240816 18:49:22.639" endtime="20240816 18:49:22.871"></status>
+<msg timestamp="20240824 23:53:16.619" level="INFO">Typing text 'Receipt' into text field '//input[@id='Search']'.</msg>
+<status status="PASS" starttime="20240824 23:53:16.619" endtime="20240824 23:53:16.893"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:22.227" endtime="20240816 18:49:22.871"></status>
+<status status="PASS" starttime="20240824 23:53:15.965" endtime="20240824 23:53:16.893"></status>
 </kw>
 <kw name="Navigate to Receipt screen" library="Receipt Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -179,55 +1016,42 @@
 <arg>${Receipt Page}</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:22.872" endtime="20240816 18:49:23.126"></status>
+<status status="PASS" starttime="20240824 23:53:16.894" endtime="20240824 23:53:16.936"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Receipt Page}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:23.126" level="INFO">Clicking link 'xpath://a[@href='/receiptindex']'.</msg>
-<status status="PASS" starttime="20240816 18:49:23.126" endtime="20240816 18:49:23.329"></status>
+<msg timestamp="20240824 23:53:16.937" level="INFO">Clicking link 'xpath://a[@href='/receiptindex']'.</msg>
+<status status="PASS" starttime="20240824 23:53:16.936" endtime="20240824 23:53:17.137"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${AddButton}</arg>
+<arg>${ReceiptAddButton}</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:23.330" endtime="20240816 18:49:23.353"></status>
+<status status="PASS" starttime="20240824 23:53:17.138" endtime="20240824 23:53:17.160"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${AddButton}</arg>
+<arg>${ReceiptAddButton}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:23.353" level="INFO">Clicking element 'xpath://button[@routerlink='/receiptitem/0']'.</msg>
-<status status="PASS" starttime="20240816 18:49:23.353" endtime="20240816 18:49:23.540"></status>
+<msg timestamp="20240824 23:53:17.161" level="INFO">Clicking element 'xpath://button[@routerlink='/receiptitem/0']'.</msg>
+<status status="PASS" starttime="20240824 23:53:17.161" endtime="20240824 23:53:17.407"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20240816 18:49:28.542" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240816 18:49:23.541" endtime="20240816 18:49:28.542"></status>
+<msg timestamp="20240824 23:53:22.408" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:17.407" endtime="20240824 23:53:22.408"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:22.872" endtime="20240816 18:49:28.542"></status>
+<status status="PASS" starttime="20240824 23:53:16.893" endtime="20240824 23:53:22.408"></status>
 </kw>
-<doc>Check if the user can create an invoice for the provided booking.
-- User searches for "Manual Invoice Requests" and navigates to the page.</doc>
-<status status="PASS" starttime="20240816 18:49:19.013" endtime="20240816 18:49:28.542" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t2" name="TC006">
-<kw name="Partila Settlement" library="Receipt Page">
-<arguments>
-<arg>${Customer Name}</arg>
-<arg>${EnterSlipNo}</arg>
-<arg>${EnterREAMT}</arg>
-<arg>${EnterRemark}</arg>
-<arg>${SettlementAmount}</arg>
-</arguments>
 <kw name="Enter Receipt Details" library="Receipt Page">
 <arguments>
 <arg>${CustomerName}</arg>
@@ -238,7 +1062,7 @@
 <arg>${ClickCustomerField}</arg>
 <arg>10S</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:28.546" endtime="20240816 18:49:28.574"></status>
+<status status="PASS" starttime="20240824 23:53:22.409" endtime="20240824 23:53:22.428"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -246,8 +1070,8 @@
 <arg>${ClickCustomerField}</arg>
 <arg>${CustomerName}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:28.574" level="INFO">Typing text 'KHAR TECHNOLOGIES PRIVATE LIMITED' into text field 'xpath://ng-select[@formcontrolname='PayeeCustomerID']//div[@role='combobox']//input'.</msg>
-<status status="PASS" starttime="20240816 18:49:28.574" endtime="20240816 18:49:28.924"></status>
+<msg timestamp="20240824 23:53:22.429" level="INFO">Typing text 'MAERSK INDIA PVT LTD' into text field 'xpath://ng-select[@formcontrolname='PayeeCustomerID']//div[@role='combobox']//input'.</msg>
+<status status="PASS" starttime="20240824 23:53:22.428" endtime="20240824 23:53:22.752"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -255,23 +1079,23 @@
 <arg>${CustomerOptionXpath}</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:28.924" endtime="20240816 18:49:29.034"></status>
+<status status="PASS" starttime="20240824 23:53:22.753" endtime="20240824 23:53:22.981"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20240816 18:49:34.035" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240816 18:49:29.034" endtime="20240816 18:49:34.035"></status>
+<msg timestamp="20240824 23:53:27.982" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:22.982" endtime="20240824 23:53:27.982"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CustomerOptionXpath}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:34.035" level="INFO">Clicking element 'xpath://div[@role='option']'.</msg>
-<status status="PASS" starttime="20240816 18:49:34.035" endtime="20240816 18:49:34.085"></status>
+<msg timestamp="20240824 23:53:27.982" level="INFO">Clicking element 'xpath://div[@role='option']'.</msg>
+<status status="PASS" starttime="20240824 23:53:27.982" endtime="20240824 23:53:28.033"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -279,23 +1103,23 @@
 <arg>${DayBookDRP}</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:34.085" endtime="20240816 18:49:34.113"></status>
+<status status="PASS" starttime="20240824 23:53:28.034" endtime="20240824 23:53:28.056"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${DayBookDRP}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:34.113" level="INFO">Clicking element 'xpath://kendo-dropdownlist[@formcontrolname='DayBookID']//span[text()='Select']'.</msg>
-<status status="PASS" starttime="20240816 18:49:34.113" endtime="20240816 18:49:34.191"></status>
+<msg timestamp="20240824 23:53:28.057" level="INFO">Clicking element 'xpath://kendo-dropdownlist[@formcontrolname='DayBookID']//span[text()='Select']'.</msg>
+<status status="PASS" starttime="20240824 23:53:28.056" endtime="20240824 23:53:28.187"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20240816 18:49:37.192" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20240816 18:49:34.191" endtime="20240816 18:49:37.192"></status>
+<msg timestamp="20240824 23:53:31.187" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:28.187" endtime="20240824 23:53:31.187"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -303,25 +1127,25 @@
 <arg>//*[text()='Purchase Daybook']</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:37.192" endtime="20240816 18:49:37.210"></status>
+<status status="PASS" starttime="20240824 23:53:31.187" endtime="20240824 23:53:31.206"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//*[text()='Purchase Daybook']</arg>
 </arguments>
-<msg timestamp="20240816 18:49:37.211" level="INFO">Clicking element '//*[text()='Purchase Daybook']'.</msg>
-<status status="PASS" starttime="20240816 18:49:37.211" endtime="20240816 18:49:37.257"></status>
+<msg timestamp="20240824 23:53:31.206" level="INFO">Clicking element '//*[text()='Purchase Daybook']'.</msg>
+<status status="PASS" starttime="20240824 23:53:31.206" endtime="20240824 23:53:31.259"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20240816 18:49:42.259" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240816 18:49:37.258" endtime="20240816 18:49:42.259"></status>
+<msg timestamp="20240824 23:53:36.260" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:31.260" endtime="20240824 23:53:36.261"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:28.546" endtime="20240816 18:49:42.260"></status>
+<status status="PASS" starttime="20240824 23:53:22.408" endtime="20240824 23:53:36.261"></status>
 </kw>
 <kw name="Type Of Receipt Normal" library="Receipt Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -329,23 +1153,23 @@
 <arguments>
 <arg>${TypeofReceipt}</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:42.260" endtime="20240816 18:49:42.278"></status>
+<status status="PASS" starttime="20240824 23:53:36.261" endtime="20240824 23:53:36.280"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${TypeofReceipt}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:42.279" level="INFO">Clicking element 'xpath://kendo-dropdownlist[@formcontrolname='VoucherCatID']//span[text()='Select']'.</msg>
-<status status="PASS" starttime="20240816 18:49:42.279" endtime="20240816 18:49:42.342"></status>
+<msg timestamp="20240824 23:53:36.280" level="INFO">Clicking element 'xpath://kendo-dropdownlist[@formcontrolname='VoucherCatID']//span[text()='Select']'.</msg>
+<status status="PASS" starttime="20240824 23:53:36.280" endtime="20240824 23:53:36.339"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20240816 18:49:47.342" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240816 18:49:42.342" endtime="20240816 18:49:47.342"></status>
+<msg timestamp="20240824 23:53:41.341" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:36.340" endtime="20240824 23:53:41.341"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -353,86 +1177,90 @@
 <arg>//*[text()='Normal']</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:47.344" endtime="20240816 18:49:47.372"></status>
+<status status="PASS" starttime="20240824 23:53:41.341" endtime="20240824 23:53:41.361"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//*[text()='Normal']</arg>
 </arguments>
-<msg timestamp="20240816 18:49:47.372" level="INFO">Clicking element '//*[text()='Normal']'.</msg>
-<status status="PASS" starttime="20240816 18:49:47.372" endtime="20240816 18:49:47.413"></status>
+<msg timestamp="20240824 23:53:41.362" level="INFO">Clicking element '//*[text()='Normal']'.</msg>
+<status status="PASS" starttime="20240824 23:53:41.362" endtime="20240824 23:53:41.416"></status>
 </kw>
-<status status="PASS" starttime="20240816 18:49:42.260" endtime="20240816 18:49:47.413"></status>
+<status status="PASS" starttime="20240824 23:53:36.261" endtime="20240824 23:53:41.417"></status>
+</kw>
+<kw name="Enter Receipt Bank Details" library="Receipt Page">
+<arguments>
+<arg>${EnterSlipNo}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ModeOfReceipt}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:41.418" endtime="20240824 23:53:41.446"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ModeOfReceipt}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:41.446" level="INFO">Clicking element 'xpath://kendo-dropdownlist[@formcontrolname='VoucherModeID']//span[text()='Select']'.</msg>
+<status status="PASS" starttime="20240824 23:53:41.446" endtime="20240824 23:53:41.506"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[text()='Cash']</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:41.506" endtime="20240824 23:53:41.751"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[text()='Cash']</arg>
+</arguments>
+<msg timestamp="20240824 23:53:41.751" level="INFO">Clicking element '//*[text()='Cash']'.</msg>
+<status status="PASS" starttime="20240824 23:53:41.751" endtime="20240824 23:53:41.836"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20240824 23:53:46.837" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:41.837" endtime="20240824 23:53:46.837"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SlipNo}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:46.837" endtime="20240824 23:53:46.858"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SlipNo}</arg>
+<arg>${EnterSlipNo}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:46.858" level="INFO">Typing text '1234' into text field 'xpath://kendo-textbox[@formcontrolname='SlipNo']//input[@class='k-input-inner']'.</msg>
+<status status="PASS" starttime="20240824 23:53:46.858" endtime="20240824 23:53:47.010"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:41.417" endtime="20240824 23:53:47.011"></status>
 </kw>
 <kw name="Enter Receipt Amount" library="Receipt Page">
 <arguments>
-<arg>${EnterSlipNo}</arg>
-<arg>${EnterREAMT}</arg>
-<arg>${EnterRemark}</arg>
+<arg>${InvoiceAMount}</arg>
 </arguments>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${ModeOfReceipt}</arg>
-</arguments>
-<status status="PASS" starttime="20240816 18:49:47.414" endtime="20240816 18:49:47.443"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${ModeOfReceipt}</arg>
-</arguments>
-<msg timestamp="20240816 18:49:47.443" level="INFO">Clicking element 'xpath://kendo-dropdownlist[@formcontrolname='VoucherModeID']//span[text()='Select']'.</msg>
-<status status="PASS" starttime="20240816 18:49:47.443" endtime="20240816 18:49:47.584"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>//*[text()='Cash']</arg>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20240816 18:49:47.585" endtime="20240816 18:49:47.845"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>//*[text()='Cash']</arg>
-</arguments>
-<msg timestamp="20240816 18:49:47.846" level="INFO">Clicking element '//*[text()='Cash']'.</msg>
-<status status="PASS" starttime="20240816 18:49:47.846" endtime="20240816 18:49:47.933"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg timestamp="20240816 18:49:52.934" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240816 18:49:47.933" endtime="20240816 18:49:52.935"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${SlipNo}</arg>
-</arguments>
-<status status="PASS" starttime="20240816 18:49:52.936" endtime="20240816 18:49:52.964"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${SlipNo}</arg>
-<arg>${EnterSlipNo}</arg>
-</arguments>
-<msg timestamp="20240816 18:49:52.964" level="INFO">Typing text '1234' into text field 'xpath://kendo-textbox[@formcontrolname='SlipNo']//input[@class='k-input-inner']'.</msg>
-<status status="PASS" starttime="20240816 18:49:52.964" endtime="20240816 18:49:53.056"></status>
-</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${ReceiptAMT}</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:53.056" endtime="20240816 18:49:53.078"></status>
+<status status="PASS" starttime="20240824 23:53:47.013" endtime="20240824 23:53:47.033"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -440,16 +1268,22 @@
 <arg>${ReceiptAMT}</arg>
 <arg>${EnterREAMT}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:53.078" level="INFO">Typing text '100' into text field 'xpath://kendo-numerictextbox[@formcontrolname='NetAmount']//input[@class='k-input-inner']'.</msg>
-<status status="PASS" starttime="20240816 18:49:53.078" endtime="20240816 18:49:53.172"></status>
+<msg timestamp="20240824 23:53:47.034" level="INFO">Typing text '1500' into text field 'xpath://kendo-numerictextbox[@formcontrolname='NetAmount']//input[@class='k-input-inner']'.</msg>
+<status status="PASS" starttime="20240824 23:53:47.034" endtime="20240824 23:53:47.189"></status>
 </kw>
+<status status="PASS" starttime="20240824 23:53:47.011" endtime="20240824 23:53:47.189"></status>
+</kw>
+<kw name="Remark" library="Receipt Page">
+<arguments>
+<arg>${EnterRemark}</arg>
+</arguments>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${Remark}</arg>
 <arg>5s</arg>
 </arguments>
-<status status="PASS" starttime="20240816 18:49:53.172" endtime="20240816 18:49:53.212"></status>
+<status status="PASS" starttime="20240824 23:53:47.189" endtime="20240824 23:53:47.210"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -457,66 +1291,375 @@
 <arg>${Remark}</arg>
 <arg>${EnterRemark}</arg>
 </arguments>
-<msg timestamp="20240816 18:49:53.212" level="INFO">Typing text 'Test' into text field 'xpath://kendo-textbox[@formcontrolname='Remark']//input[@class='k-input-inner']'.</msg>
-<status status="PASS" starttime="20240816 18:49:53.212" endtime="20240816 18:49:53.372"></status>
-</kw>
-<status status="PASS" starttime="20240816 18:49:47.414" endtime="20240816 18:49:53.372"></status>
-</kw>
-<kw name="Enter Settment Anount" library="Receipt Page">
-<arguments>
-<arg>Enter Settlement Amount</arg>
-</arguments>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<arguments>
-<arg>window.scrollBy(0, 200)</arg>
-</arguments>
-<msg timestamp="20240816 18:49:53.373" level="INFO">Executing JavaScript:
-window.scrollBy(0, 200)
-Without any arguments.</msg>
-<status status="PASS" starttime="20240816 18:49:53.373" endtime="20240816 18:49:53.382"></status>
+<msg timestamp="20240824 23:53:47.211" level="INFO">Typing text 'Test' into text field 'xpath://kendo-textbox[@formcontrolname='Remark']//input[@class='k-input-inner']'.</msg>
+<status status="PASS" starttime="20240824 23:53:47.211" endtime="20240824 23:53:47.421"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20240816 18:49:58.384" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240816 18:49:53.383" endtime="20240816 18:49:58.384"></status>
+<msg timestamp="20240824 23:53:52.422" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240824 23:53:47.421" endtime="20240824 23:53:52.422"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:47.189" endtime="20240824 23:53:52.422"></status>
+</kw>
+<kw name="Submit Receipt" library="Receipt Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:52.422" endtime="20240824 23:53:52.444"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:52.444" level="INFO">Clicking element 'xpath://span[text()=' Submit']'.</msg>
+<status status="PASS" starttime="20240824 23:53:52.444" endtime="20240824 23:53:52.525"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:52.422" endtime="20240824 23:53:52.525"></status>
+</kw>
+<kw name="Open Receipt" library="Receipt Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${OpneReceipt}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:52.526" endtime="20240824 23:53:53.399"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${OpneReceipt}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:53.399" level="INFO">Clicking element 'xpath://table[@role='presentation']/tbody/tr[1]/td[1]//kendo-button[@role='button']'.</msg>
+<status status="PASS" starttime="20240824 23:53:53.399" endtime="20240824 23:53:53.510"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${Settlement Amount}</arg>
+<arg>${RemainingDebitAmount}</arg>
 <arg>10s</arg>
 </arguments>
-<msg timestamp="20240816 18:50:08.678" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20240816 18:50:08.681" level="FAIL">Element '50' not visible after 10 seconds.</msg>
-<status status="FAIL" starttime="20240816 18:49:58.385" endtime="20240816 18:50:08.681"></status>
+<status status="PASS" starttime="20240824 23:53:53.512" endtime="20240824 23:53:54.991"></status>
 </kw>
-<status status="FAIL" starttime="20240816 18:49:53.373" endtime="20240816 18:50:08.682"></status>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${RemainingDebitAmount}</arg>
+</arguments>
+<assign>
+<var>${GetDebitAmount}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.010" level="INFO">${GetDebitAmount} = Debit Invoice - [ Balance Amount : 0]</msg>
+<status status="PASS" starttime="20240824 23:53:54.991" endtime="20240824 23:53:55.010"></status>
 </kw>
-<status status="FAIL" starttime="20240816 18:49:28.546" endtime="20240816 18:50:08.682"></status>
+<status status="PASS" starttime="20240824 23:53:52.526" endtime="20240824 23:53:55.011"></status>
 </kw>
-<status status="FAIL" starttime="20240816 18:49:28.545" endtime="20240816 18:50:08.682" critical="yes">Element '50' not visible after 10 seconds.</status>
+<kw name="Get Receipt Data" library="Receipt Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Receiptdata}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:55.011" endtime="20240824 23:53:55.029"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Receiptdata}</arg>
+</arguments>
+<assign>
+<var>${GetReceiptData}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.047" level="INFO">${GetReceiptData} = INV/2024/00830 62332853BN08222024023EMP,A,PONU8526563 24/08/2024 INR 1,500 1,500 0 0 0</msg>
+<status status="PASS" starttime="20240824 23:53:55.030" endtime="20240824 23:53:55.047"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ReceiptNumber}</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:55.047" endtime="20240824 23:53:55.074"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ReceiptNumber}</arg>
+</arguments>
+<assign>
+<var>${GetReceiptNumber}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.089" level="INFO">${GetReceiptNumber} = INV/2024/00830</msg>
+<status status="PASS" starttime="20240824 23:53:55.075" endtime="20240824 23:53:55.089"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ReferenceNumber}</arg>
+</arguments>
+<assign>
+<var>${GetReferenceNumber}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.113" level="INFO">${GetReferenceNumber} = 62332853BN08222024023EMP,A,PONU8526563</msg>
+<status status="PASS" starttime="20240824 23:53:55.089" endtime="20240824 23:53:55.113"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ReceiptCustometName}</arg>
+</arguments>
+<assign>
+<var>${GetReceiptCustomerName}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.141" level="INFO">${GetReceiptCustomerName} = 24/08/2024</msg>
+<status status="PASS" starttime="20240824 23:53:55.113" endtime="20240824 23:53:55.141"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ReceiptCreationDate}</arg>
+</arguments>
+<assign>
+<var>${GetReceiptCreationDate}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.161" level="INFO">${GetReceiptCreationDate} = INR</msg>
+<status status="PASS" starttime="20240824 23:53:55.141" endtime="20240824 23:53:55.161"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Category}</arg>
+</arguments>
+<assign>
+<var>${GetCategory}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.180" level="INFO">${GetCategory} = 1,500</msg>
+<status status="PASS" starttime="20240824 23:53:55.161" endtime="20240824 23:53:55.180"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DebitVoucherNumber}</arg>
+</arguments>
+<assign>
+<var>${getDebitVoucherNumber}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.197" level="INFO">${getDebitVoucherNumber} = 1,500</msg>
+<status status="PASS" starttime="20240824 23:53:55.180" endtime="20240824 23:53:55.197"></status>
+</kw>
+<kw name="Scroll Until Element Is Visible" library="Common_Keyword">
+<arguments>
+<arg>${ReceiptAmount}</arg>
+</arguments>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:55.215" level="INFO">Element 'xpath://table[@role='presentation']//tbody/tr[1]/td[8]' is displayed.</msg>
+<status status="PASS" starttime="20240824 23:53:55.197" endtime="20240824 23:53:55.215"></status>
+</kw>
+<msg timestamp="20240824 23:53:55.216" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20240824 23:53:55.197" endtime="20240824 23:53:55.216"></status>
+</kw>
+<kw name="${counter} IN RANGE [ 1 | 2 ]" type="for">
+<kw name="${counter} = 1" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:55.216" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20240824 23:53:55.216" endtime="20240824 23:53:55.216"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.216" endtime="20240824 23:53:55.216"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.216" endtime="20240824 23:53:55.216"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Element '${locator}' not visible after scrolling</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:55.216" endtime="20240824 23:53:55.216"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.197" endtime="20240824 23:53:55.216"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ReceiptAmount}</arg>
+</arguments>
+<assign>
+<var>${GetReceiptAmount}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.231" level="INFO">${GetReceiptAmount} = 0</msg>
+<status status="PASS" starttime="20240824 23:53:55.216" endtime="20240824 23:53:55.231"></status>
+</kw>
+<kw name="Scroll Until Element Is Visible" library="Common_Keyword">
+<arguments>
+<arg>${ReceiptShipNumber}</arg>
+</arguments>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:55.250" level="INFO">Element 'xpath://table[@role='presentation']//tbody/tr[1]/td[9]' is displayed.</msg>
+<status status="PASS" starttime="20240824 23:53:55.233" endtime="20240824 23:53:55.250"></status>
+</kw>
+<msg timestamp="20240824 23:53:55.250" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20240824 23:53:55.233" endtime="20240824 23:53:55.250"></status>
+</kw>
+<kw name="${counter} IN RANGE [ 1 | 2 ]" type="for">
+<kw name="${counter} = 1" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:55.250" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20240824 23:53:55.250" endtime="20240824 23:53:55.250"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.250" endtime="20240824 23:53:55.250"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.250" endtime="20240824 23:53:55.250"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Element '${locator}' not visible after scrolling</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:55.250" endtime="20240824 23:53:55.250"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.232" endtime="20240824 23:53:55.250"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ReceiptShipNumber}</arg>
+</arguments>
+<assign>
+<var>${GetReceiptShipNumber}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.266" level="INFO">${GetReceiptShipNumber} = 0</msg>
+<status status="PASS" starttime="20240824 23:53:55.250" endtime="20240824 23:53:55.266"></status>
+</kw>
+<kw name="Scroll Until Element Is Visible" library="Common_Keyword">
+<arguments>
+<arg>${ReceiptStatus}</arg>
+</arguments>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:55.292" level="INFO">Element 'xpath://table[@role='presentation']//tbody/tr[1]/td[10]' is displayed.</msg>
+<status status="PASS" starttime="20240824 23:53:55.266" endtime="20240824 23:53:55.292"></status>
+</kw>
+<msg timestamp="20240824 23:53:55.292" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20240824 23:53:55.266" endtime="20240824 23:53:55.292"></status>
+</kw>
+<kw name="${counter} IN RANGE [ 1 | 2 ]" type="for">
+<kw name="${counter} = 1" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<msg timestamp="20240824 23:53:55.293" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20240824 23:53:55.293" endtime="20240824 23:53:55.294"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.293" endtime="20240824 23:53:55.294"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.292" endtime="20240824 23:53:55.294"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Element '${locator}' not visible after scrolling</arg>
+</arguments>
+<status status="PASS" starttime="20240824 23:53:55.294" endtime="20240824 23:53:55.295"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.266" endtime="20240824 23:53:55.295"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ReceiptStatus}</arg>
+</arguments>
+<assign>
+<var>${GetReceiptStatus}</var>
+</assign>
+<msg timestamp="20240824 23:53:55.309" level="INFO">${GetReceiptStatus} = 0</msg>
+<status status="PASS" starttime="20240824 23:53:55.296" endtime="20240824 23:53:55.309"></status>
+</kw>
+<status status="PASS" starttime="20240824 23:53:55.011" endtime="20240824 23:53:55.309"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240824 23:53:55.309" endtime="20240824 23:54:01.626"></status>
+</kw>
+<doc>Check if the user can perform full settlement for the created invoice, from receipt screen</doc>
+<status status="PASS" starttime="20240824 23:53:15.964" endtime="20240824 23:54:01.627" critical="yes"></status>
 </test>
-<status status="FAIL" starttime="20240816 18:49:18.350" endtime="20240816 18:50:08.683"></status>
+<status status="PASS" starttime="20240824 23:52:20.318" endtime="20240824 23:54:01.628"></status>
 </suite>
-<status status="FAIL" starttime="20240816 18:49:18.342" endtime="20240816 18:50:08.685"></status>
+<status status="PASS" starttime="20240824 23:52:20.314" endtime="20240824 23:54:01.630"></status>
 </suite>
-<status status="FAIL" starttime="20240816 18:49:18.327" endtime="20240816 18:50:08.687"></status>
+<status status="PASS" starttime="20240824 23:52:20.294" endtime="20240824 23:54:01.635"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1">Critical Tests</stat>
-<stat pass="1" fail="1">All Tests</stat>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" id="s1" name="Enabill 4.5 1">Enabill 4.5 1</stat>
-<stat pass="1" fail="1" id="s1-s1" name="Robot Script Library">Enabill 4.5 1.Robot Script Library</stat>
-<stat pass="1" fail="1" id="s1-s1-s1" name="Receipt Test">Enabill 4.5 1.Robot Script Library.Receipt Test</stat>
+<stat pass="8" fail="0" id="s1" name="Enabill 4.5 1">Enabill 4.5 1</stat>
+<stat pass="8" fail="0" id="s1-s1" name="Robot Script Library">Enabill 4.5 1.Robot Script Library</stat>
+<stat pass="8" fail="0" id="s1-s1-s1" name="Manual Invoice Requests Test">Enabill 4.5 1.Robot Script Library.Manual Invoice Requests Test</stat>
 </suite>
 </statistics>
 <errors>

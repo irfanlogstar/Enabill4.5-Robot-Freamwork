@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.robotframework.ide.eclipse.main.plugin.robotNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>libspecs/SeleniumLibrary.py</name>
-			<type>1</type>
-			<location>C:/Python/Lib/site-packages/SeleniumLibrary/keywords/element.py</location>
-		</link>
-	</linkedResources>
 </projectDescription>

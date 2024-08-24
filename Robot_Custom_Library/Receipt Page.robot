@@ -2,12 +2,13 @@
 Library    SeleniumLibrary
 Library    ExcelLibrary 
 Resource    Common_Keyword.robot
+Resource    Manual Invoice Requests Page.robot
 
 
 
 *** Variables ***
 ${Receipt Page}        xpath://a[@href='/receiptindex']
-${AddButton}           xpath://button[@routerlink='/receiptitem/0']
+${ReceiptAddButton}           xpath://button[@routerlink='/receiptitem/0']
 
 ${ClickCustomerField}       xpath://ng-select[@formcontrolname='PayeeCustomerID']//div[@role='combobox']//input
 ${CustomerOptionXpath}      xpath://div[@role='option']
@@ -20,8 +21,9 @@ ${SlipNo}        xpath://kendo-textbox[@formcontrolname='SlipNo']//input[@class=
 ${ReceiptAMT}        xpath://kendo-numerictextbox[@formcontrolname='NetAmount']//input[@class='k-input-inner']
 ${Submit}           xpath://span[text()=' Submit']
 
-${Receiptdata}         xpath://tr[@aria-rowindex='2']     #Collect All Receipt data
-${ReceiptNumber}       xpath://tr[@aria-rowindex='2']//td[2]    #ReceiptNumner
+# Receipt Grid Table data
+${Receiptdata}         xpath://table[@role='presentation']//tbody/tr[1]     #Collect All Receipt data
+${ReceiptNumber}       //table[@role='presentation']//tbody/tr[1]/td[2]    #ReceiptNumner
 ${ReferenceNumber}     xpath://table[@role='presentation']//tbody/tr[1]/td[3]
 ${ReceiptCustometName}     xpath://table[@role='presentation']//tbody/tr[1]/td[4]
 ${ReceiptCreationDate}     xpath://table[@role='presentation']//tbody/tr[1]/td[5]
@@ -32,10 +34,10 @@ ${ReceiptShipNumber}        xpath://table[@role='presentation']//tbody/tr[1]/td[
 ${ReceiptStatus}       xpath://table[@role='presentation']//tbody/tr[1]/td[10]  
 ${Remark}         xpath://kendo-textbox[@formcontrolname='Remark']//input[@class='k-input-inner']
 
-${OpneReceipt}        xpath://table[@role='presentation']/tbody/tr[1]/td[1]  
+${OpneReceipt}        xpath://table[@role='presentation']/tbody/tr[1]/td[1]//kendo-button[@role='button'] 
 ${RemainingDebitAmount}    xpath://div[@id='Debit']
 
-${Settlement Amount}        xpath://table[@role='presentation']/tbody/tr[1]/td[7]
+${SettlementAmount}        xpath://table[@role='presentation']/tbody/tr[1]/td[7]
 
 
 
@@ -45,9 +47,10 @@ Wait For Loader To Disappear
     
 Navigate to Receipt screen 
     Wait Until Element Is Visible    ${Receipt Page}    10s
-    Click Link   ${Receipt Page} 
-    Wait Until Element Is Visible    ${AddButton}    10s
-    Click Element    ${AddButton}   
+    Click Link   ${Receipt Page}    
+    # Scroll Until Element Is Visible        ${AddButton}   
+    Wait Until Element Is Visible    ${ReceiptAddButton}    10s
+    Click Element    ${ReceiptAddButton}   
     Sleep    5s        
     
 Enter Receipt Details
@@ -84,37 +87,40 @@ Type Of Receipt Normal
     # Sleep    5s
      
     
-Enter Receipt Amount
-    [Arguments]    ${EnterSlipNo}    ${EnterREAMT}    ${EnterRemark}
+Enter Receipt Bank Details
+    [Arguments]    ${EnterSlipNo}
     Wait Until Element Is Visible        ${ModeOfReceipt}    
     Click Element        ${ModeOfReceipt}  
     Wait Until Element Is Visible        //*[text()='Cash']     10s
     Click Element         //*[text()='Cash']  
     Sleep    5s  
-    
+ 
     Wait Until Element Is Visible        ${SlipNo}  
     Input Text    ${SlipNo}    ${EnterSlipNo} 
     
+Enter Receipt Amount
+    [Arguments]   ${EnterREAMT} 
     Wait Until Element Is Visible        ${ReceiptAMT}    10s 
     Input Text        ${ReceiptAMT}    ${EnterREAMT}
     
-    
+Remark
+    [Arguments]    ${EnterRemark} 
     Wait Until Element Is Visible    ${Remark}    5s
-    Input Text        ${Remark}    ${EnterRemark}    
+    Input Text        ${Remark}    ${EnterRemark} 
+    Sleep    5s       
 
-Enter Settment Anount
-     [Arguments]    ${EnterSettlementAmount}
-     Execute JavaScript    window.scrollBy(0, 200)
+Enter Settlement Amount  
+    [Arguments]    ${EnterSettlementAmount}
     
-    # Scroll Element Into View    ${Settlement Amount}
-    
-    Sleep        5s    
-    Wait Until Element Is Visible    ${Settlement Amount}    10s
-    
-    
-    Input Text    ${Settlement Amount}    ${EnterSettlementAmount}
+    Execute JavaScript    window.scrollBy(0, 300)
+    # # Scroll Element Into View    ${SettlementAmount}
     Sleep    5s    
+    # Wait Until Element Is Visible    ${SettlementAmount}    20s
     
+    Click Element    ${SettlementAmount}    
+    Input Text    ${SettlementAmount}    ${EnterSettlementAmount}
+    
+    Sleep    5s
 
 Submit Receipt
     Wait Until Element Is Visible        ${Submit}     
@@ -146,15 +152,15 @@ Open Receipt
       
     
 
-Partila Settlement
-    [Arguments]    ${CustomerName}     ${EnterSlipNo}    ${EnterREAMT}    ${EnterRemark}    ${Enter Settlement Amount}
-    Enter Receipt Details    ${CustomerName}
-    Type Of Receipt Normal
-    Enter Receipt Amount    ${EnterSlipNo}     ${EnterREAMT}    ${EnterRemark}
-    Enter Settment Anount    Enter Settlement Amount
-    Submit Receipt
-    Get Receipt Data
-    Open Receipt
+# Partila Settlement
+    # [Arguments]    ${CustomerName}     ${EnterSlipNo}    ${EnterREAMT}    ${EnterRemark}    ${Enter Settlement Amount}
+    # Enter Receipt Details    ${CustomerName}
+    # Type Of Receipt Normal
+    # Enter Receipt Amount    ${EnterSlipNo}     ${EnterREAMT}    ${EnterRemark}
+    # Enter Settlement Amount    ${Enter Settlement Amount}
+    # Submit Receipt
+    # Get Receipt Data
+    # Open Receipt
     
     
     
